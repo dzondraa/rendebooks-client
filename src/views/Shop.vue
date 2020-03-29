@@ -6,6 +6,7 @@
 					<Sidebar/>
 				</div>
 				<div class="col-lg-9">
+					<ProductList/>
 				</div>
 			</div>
 				
@@ -18,15 +19,12 @@
 <script>
 // @ is an alias to /src
 import Sidebar from '@/components/shared/navigation/Sidebar'
-import ProductServices from '@/services/ProductServices'
+import ProductList from '@/components/products/ProductList'
 
 export default {
   name: 'Shop',
-	components: { Sidebar },
+	components: { Sidebar, ProductList },
 	
-	mounted() {
-		ProductServices.getPosts()
-	}
 }
 </script>
 

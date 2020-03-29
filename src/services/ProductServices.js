@@ -1,12 +1,7 @@
-import axios from 'axios'
-
-const Api = 'https://jsonplaceholder.typicode.com'
+import Api from '@/services/Api'
 
 export default {
 	getPosts() {
-		axios.get(`${Api}/posts`)
-		.then(response => {
-			console.log(response.data);
-		});
+		return Api().get(`/posts`)
 	},
 }
