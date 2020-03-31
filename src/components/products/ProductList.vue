@@ -26,12 +26,13 @@ export default {
 	data() {
 		return {
 			products: [], // Array of products
-			firstProduct: {}
+			parentCategoryId: this.categoryId
 		}
 	},
 
 	mounted() {
 		this.getProducts()
+		
 	},
 	
 	methods: {
@@ -39,7 +40,9 @@ export default {
 			const res = await ProductServices.getPosts()			
 			this.products = res.data
 		},
-	}
+	},
+
+	props: ['category-id']
 }
 </script>
 

@@ -3,10 +3,11 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-3 side">
-					<Sidebar/>
+					<Sidebar v-on:childToParent="setCategory"/>
 				</div>
 				<div class="col-lg-9">
-					<ProductList/>
+					
+					<ProductList :category-id="categoryId" />
 				</div>
 			</div>
 				
@@ -24,6 +25,17 @@ import ProductList from '@/components/products/ProductList'
 export default {
   name: 'Shop',
 	components: { Sidebar, ProductList },
+
+	data() {
+		return {
+			categoryId: 1,
+		}
+	},
+	methods: {
+		setCategory(value) {
+			this.categoryId = value
+		}
+	}
 	
 }
 </script>

@@ -2,10 +2,64 @@
 	<!-- Sidebar -->
 	<div id="sidebar">
 			<div class="list-group" id="list-tab" role="tablist">
-				<a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-				<a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-				<a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-				<a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+				<a 
+					v-on:click="passToParent"
+					class="list-group-item list-group-item-action active" 
+					id="list-home-list" 
+					data-category='1' 
+					data-toggle="list" 
+					href="#list-home" 
+					role="tab" 
+					aria-controls="home"
+				>
+					Home
+				</a>
+				<a 
+					v-on:click="passToParent"
+					class="list-group-item list-group-item-action" 
+					id="list-home-list" 
+					data-category='2' 
+					data-toggle="list" 
+					href="#list-home" 
+					role="tab" 
+					aria-controls="home"
+				>Profile</a>
 			</div>
 	</div>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			categoryId: 1
+		}
+	},
+
+	methods: {
+		passToParent(event) {
+			this.categoryId = parseInt(event.target.getAttribute('data-category'))
+			this.$emit('childToParent', this.categoryId)
+		}	
+	},
+
+	props: ['category']
+}
+</script>
+
+<style lang="scss" scoped>
+	#sidebar {
+		padding: 20px;
+		a {
+			border-radius: 5px;
+			margin: 2px;
+			border: 2px solid #fff;
+			transition: all ease-in-out 100ms;
+		}
+
+		a:active {
+			// background-color: rgba($color:#007bff, $alpha: 0.9);
+			border: 2px solid #007bff;
+		}
+	}
+</style>
