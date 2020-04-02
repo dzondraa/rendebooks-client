@@ -1,21 +1,19 @@
 <template>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#">Navbar</a>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<img src="@/assets/images/rende.jpg" alt="Rende">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					<router-link class="nav-link" to="/">Pocetna</router-link>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Features</a>
+					<router-link class="nav-link" to="/shop">Prodavnica</router-link>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Pricing</a>
-				</li>
-				<li class="nav-item dropdown">
+
+				<!-- <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Dropdown link
 					</a>
@@ -24,8 +22,33 @@
 						<a class="dropdown-item" href="#">Another action</a>
 						<a class="dropdown-item" href="#">Something else here</a>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 	</nav>
 </template>
+
+<style lang="scss" scoped>
+
+nav {
+	background-color: #31b554;
+	img {
+		height: 100px;
+	}
+
+	ul {
+		margin-left: 20px;
+		li {
+			a {
+				padding: 38px 15px !important;
+				border-bottom: 3px solid #31b554;
+				transition: all ease-in-out 300ms;
+			}
+			a:hover {
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+</style>

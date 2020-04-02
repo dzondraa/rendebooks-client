@@ -58,8 +58,12 @@ export default {
 		}
 
 		a:active {
-			// background-color: rgba($color:#007bff, $alpha: 0.9);
-			border: 2px solid #007bff;
+			background-color: #31b554;
+			border: 2px solid #31b554;
+		}
+
+		a.active {
+			background-color: #31b554;
 		}
 	}
 </style>
