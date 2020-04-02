@@ -42,6 +42,14 @@ export default {
 		},
 	},
 
+	watch: {
+		categoryId(val) {
+			console.log('SUCCESS: ', val);
+			this.getProducts()			
+		},
+	},
+	
+
 	props: ['category-id']
 }
 </script>

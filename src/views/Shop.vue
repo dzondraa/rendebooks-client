@@ -33,10 +33,11 @@ export default {
 	},
 	methods: {
 		setCategory(value) {
+			console.log(value);
+			
 			this.categoryId = value
 		}
-	}
-	
+	},
 }
 </script>
 

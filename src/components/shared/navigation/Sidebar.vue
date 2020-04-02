@@ -39,8 +39,8 @@ export default {
 	methods: {
 		passToParent(event) {
 			this.categoryId = parseInt(event.target.getAttribute('data-category'))
-			this.$emit('childToParent', this.categoryId)
-		}	
+			this.$parent.setCategory(this.categoryId)
+		}
 	},
 
 	props: ['category']
