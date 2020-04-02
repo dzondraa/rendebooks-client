@@ -23,3 +23,9 @@
 		</div>
 	</div>
 </template>
+
+<style lang="scss" scoped>
+	#BasicLoader {
+		margin: 100px auto;
+	}
+</style>
