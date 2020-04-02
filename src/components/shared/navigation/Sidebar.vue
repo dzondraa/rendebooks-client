@@ -48,6 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	@import '@/assets/scss/_variables.scss';
 	#sidebar {
 		padding: 20px;
 		a {
@@ -58,12 +59,12 @@ export default {
 		}
 
 		a:active {
-			background-color: #31b554;
-			border: 2px solid #31b554;
+			background-color: $primary-color;
+			border: 2px solid $primary-color;
 		}
 
 		a.active {
-			background-color: #31b554;
+			background-color: $primary-color;
 		}
 	}
 </style>

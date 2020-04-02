@@ -76,6 +76,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	#ProductList {
+		overflow: auto;
+	}
 	.side {
 		padding-left: 0;
 	}

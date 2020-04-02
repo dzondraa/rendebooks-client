@@ -29,9 +29,10 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_variables.scss';
 
 nav {
-	background-color: #31b554;
+	background-color: $primary-color;
 	img {
 		height: 100px;
 	}
@@ -41,7 +42,7 @@ nav {
 		li {
 			a {
 				padding: 38px 15px !important;
-				border-bottom: 3px solid #31b554;
+				border-bottom: 3px solid $primary-color;
 				transition: all ease-in-out 300ms;
 			}
 			a:hover {

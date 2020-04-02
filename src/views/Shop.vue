@@ -5,7 +5,7 @@
 				<div class="col-lg-3 side">
 					<Sidebar v-on:childToParent="setCategory"/>
 				</div>
-				<div class="col-lg-9">
+				<div class="col-lg-9 p-list">
 					
 					<ProductList :category-id="categoryId" />
 				</div>
